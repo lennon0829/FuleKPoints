@@ -11,35 +11,34 @@ public class Function {
 	public static byte byte0,byte1;
 	public static void falsereason(String s)
 	{
-		 System.out.println(s);
 		 if( s.equals(""   ) ) {  reason=""; return;}
-	     if( s.equals("00" ) ) {  reason="命令执行成功 ....."; return;} 
-	     if( s.equals("1"  ) ) {  reason="命令操作失败 .....";   return;}
-	     if( s.equals("2"  ) ) {  reason="地址校验错误 .....";  return;}
-	     if( s.equals("3"  ) ) {  reason="找不到已选择的端口 .....";  return;}
-	     if( s.equals("4"  ) ) {  reason="读写器返回超时 .....";       return;}
-	     if( s.equals("5"  ) ) {  reason="数据包流水号不正确 .....";    return;}
-	     if( s.equals("7"  ) ) {  reason="接收异常 .....";   return;}
-	     if( s.equals("10" ) ) {  reason="参数值超出范围 .....";  return;}
-	     if( s.equals("80" ) ) {  reason="参数设置成功 .....";    return;}
-	     if( s.equals("81" ) ) {  reason="参数设置失败 .....";   return;}
-	     if( s.equals("82" ) ) {  reason="通讯超时.....";  return;}
-	     if( s.equals("83" ) ) {  reason="卡不存在.....";     return;}
-	     if( s.equals("84" ) ) {  reason="接收卡数据出错.....";   return;}
-	     if( s.equals("85" ) ) {  reason="未知的错误.....";      return;}
-	     if( s.equals("87" ) ) {  reason="输入参数或者输入命令格式错误.....";    return;}
-	     if( s.equals("89" ) ) {  reason="输入的指令代码不存在.....";   return;}
-	     if( s.equals("8A" ) ) {  reason="在对于卡块初始化命令中出现错误.....";      return;}
-	     if( s.equals("8B" ) ) {  reason="在防冲突过程中得到错误的序列号.....";       return;}
-	     if( s.equals("8C" ) ) {  reason="密码认证没通过.....";    return;}
-	     if( s.equals("8F" ) ) {  reason="读取器接收到未知命令.....";   return;}
-	     if( s.equals("90" ) ) {  reason="卡不支持这个命令.....";   return;}
-	     if( s.equals("91" ) ) {  reason="命令格式有错误.....";        return;}
-	     if( s.equals("92" ) ) {  reason="在命令的FLAG参数中，不支持OPTION 模式.....";     return;}
-	     if( s.equals("93" ) ) {  reason="要操作的BLOCK不存在.....";   return;}
-	     if( s.equals("94" ) ) {  reason="要操作的对象已经别锁定，不能进行修改.....";   return;}
-	     if( s.equals("95" ) ) {  reason="锁定操作不成功.....";  return;}
-	     if( s.equals("96" ) ) {  reason="写操作不成功.....";   return;}
+	     if( s.equals("00" ) ) {  reason="命令执行成功,"; return;} 
+	     if( s.equals("1"  ) ) {  reason="命令操作失败,";   return;}
+	     if( s.equals("2"  ) ) {  reason="地址校验错误,";  return;}
+	     if( s.equals("3"  ) ) {  reason="找不到已选择的端口,";  return;}
+	     if( s.equals("4"  ) ) {  reason="读写器返回超时,";       return;}
+	     if( s.equals("5"  ) ) {  reason="数据包流水号不正确,";    return;}
+	     if( s.equals("7"  ) ) {  reason="接收异常,";   return;}
+	     if( s.equals("10" ) ) {  reason="参数值超出范围,";  return;}
+	     if( s.equals("80" ) ) {  reason="参数设置成功,";    return;}
+	     if( s.equals("81" ) ) {  reason="参数设置失败,";   return;}
+	     if( s.equals("82" ) ) {  reason="通讯超时,";  return;}
+	     if( s.equals("83" ) ) {  reason="卡不存在,";     return;}
+	     if( s.equals("84" ) ) {  reason="接收卡数据出错,";   return;}
+	     if( s.equals("85" ) ) {  reason="未知的错误,";      return;}
+	     if( s.equals("87" ) ) {  reason="输入参数或者输入命令格式错误,";    return;}
+	     if( s.equals("89" ) ) {  reason="输入的指令代码不存在,";   return;}
+	     if( s.equals("8A" ) ) {  reason="在对于卡块初始化命令中出现错误,";      return;}
+	     if( s.equals("8B" ) ) {  reason="在防冲突过程中得到错误的序列号,";       return;}
+	     if( s.equals("8C" ) ) {  reason="密码认证没通过,";    return;}
+	     if( s.equals("8F" ) ) {  reason="读取器接收到未知命令,";   return;}
+	     if( s.equals("90" ) ) {  reason="卡不支持这个命令,";   return;}
+	     if( s.equals("91" ) ) {  reason="命令格式有错误,";        return;}
+	     if( s.equals("92" ) ) {  reason="在命令的FLAG参数中，不支持OPTION 模式,";     return;}
+	     if( s.equals("93" ) ) {  reason="要操作的BLOCK不存在,";   return;}
+	     if( s.equals("94" ) ) {  reason="要操作的对象已经别锁定，不能进行修改,";   return;}
+	     if( s.equals("95" ) ) {  reason="锁定操作不成功,";  return;}
+	     if( s.equals("96" ) ) {  reason="写操作不成功,";   return;}
 	}
 	public static int MF_Read()
 	{
