@@ -12,33 +12,33 @@ public class Function {
 	public static void falsereason(String s)
 	{
 		 if( s.equals(""   ) ) {  reason=""; return;}
-	     if( s.equals("00" ) ) {  reason="ÃüÁîÖ´ĞĞ³É¹¦,"; return;} 
-	     if( s.equals("1"  ) ) {  reason="ÃüÁî²Ù×÷Ê§°Ü,";   return;}
-	     if( s.equals("2"  ) ) {  reason="µØÖ·Ğ£Ñé´íÎó,";  return;}
-	     if( s.equals("3"  ) ) {  reason="ÕÒ²»µ½ÒÑÑ¡ÔñµÄ¶Ë¿Ú,";  return;}
-	     if( s.equals("4"  ) ) {  reason="¶ÁĞ´Æ÷·µ»Ø³¬Ê±,";       return;}
-	     if( s.equals("5"  ) ) {  reason="Êı¾İ°üÁ÷Ë®ºÅ²»ÕıÈ·,";    return;}
-	     if( s.equals("7"  ) ) {  reason="½ÓÊÕÒì³£,";   return;}
-	     if( s.equals("10" ) ) {  reason="²ÎÊıÖµ³¬³ö·¶Î§,";  return;}
-	     if( s.equals("80" ) ) {  reason="²ÎÊıÉèÖÃ³É¹¦,";    return;}
-	     if( s.equals("81" ) ) {  reason="²ÎÊıÉèÖÃÊ§°Ü,";   return;}
-	     if( s.equals("82" ) ) {  reason="Í¨Ñ¶³¬Ê±,";  return;}
-	     if( s.equals("83" ) ) {  reason="¿¨²»´æÔÚ,";     return;}
-	     if( s.equals("84" ) ) {  reason="½ÓÊÕ¿¨Êı¾İ³ö´í,";   return;}
-	     if( s.equals("85" ) ) {  reason="Î´ÖªµÄ´íÎó,";      return;}
-	     if( s.equals("87" ) ) {  reason="ÊäÈë²ÎÊı»òÕßÊäÈëÃüÁî¸ñÊ½´íÎó,";    return;}
-	     if( s.equals("89" ) ) {  reason="ÊäÈëµÄÖ¸Áî´úÂë²»´æÔÚ,";   return;}
-	     if( s.equals("8A" ) ) {  reason="ÔÚ¶ÔÓÚ¿¨¿é³õÊ¼»¯ÃüÁîÖĞ³öÏÖ´íÎó,";      return;}
-	     if( s.equals("8B" ) ) {  reason="ÔÚ·À³åÍ»¹ı³ÌÖĞµÃµ½´íÎóµÄĞòÁĞºÅ,";       return;}
-	     if( s.equals("8C" ) ) {  reason="ÃÜÂëÈÏÖ¤Ã»Í¨¹ı,";    return;}
-	     if( s.equals("8F" ) ) {  reason="¶ÁÈ¡Æ÷½ÓÊÕµ½Î´ÖªÃüÁî,";   return;}
-	     if( s.equals("90" ) ) {  reason="¿¨²»Ö§³ÖÕâ¸öÃüÁî,";   return;}
-	     if( s.equals("91" ) ) {  reason="ÃüÁî¸ñÊ½ÓĞ´íÎó,";        return;}
-	     if( s.equals("92" ) ) {  reason="ÔÚÃüÁîµÄFLAG²ÎÊıÖĞ£¬²»Ö§³ÖOPTION Ä£Ê½,";     return;}
-	     if( s.equals("93" ) ) {  reason="Òª²Ù×÷µÄBLOCK²»´æÔÚ,";   return;}
-	     if( s.equals("94" ) ) {  reason="Òª²Ù×÷µÄ¶ÔÏóÒÑ¾­±ğËø¶¨£¬²»ÄÜ½øĞĞĞŞ¸Ä,";   return;}
-	     if( s.equals("95" ) ) {  reason="Ëø¶¨²Ù×÷²»³É¹¦,";  return;}
-	     if( s.equals("96" ) ) {  reason="Ğ´²Ù×÷²»³É¹¦,";   return;}
+	     if( s.equals("00" ) ) {  reason="å‘½ä»¤æ‰§è¡ŒæˆåŠŸ,"; return;} 
+	     if( s.equals("1"  ) ) {  reason="å‘½ä»¤æ“ä½œå¤±è´¥,";   return;}
+	     if( s.equals("2"  ) ) {  reason="åœ°å€æ ¡éªŒé”™è¯¯,";  return;}
+	     if( s.equals("3"  ) ) {  reason="æ‰¾ä¸åˆ°å·²é€‰æ‹©çš„ç«¯å£,";  return;}
+	     if( s.equals("4"  ) ) {  reason="è¯»å†™å™¨è¿”å›è¶…æ—¶,";       return;}
+	     if( s.equals("5"  ) ) {  reason="æ•°æ®åŒ…æµæ°´å·ä¸æ­£ç¡®,";    return;}
+	     if( s.equals("7"  ) ) {  reason="æ¥æ”¶å¼‚å¸¸,";   return;}
+	     if( s.equals("10" ) ) {  reason="å‚æ•°å€¼è¶…å‡ºèŒƒå›´,";  return;}
+	     if( s.equals("80" ) ) {  reason="å‚æ•°è®¾ç½®æˆåŠŸ,";    return;}
+	     if( s.equals("81" ) ) {  reason="å‚æ•°è®¾ç½®å¤±è´¥,";   return;}
+	     if( s.equals("82" ) ) {  reason="é€šè®¯è¶…æ—¶,";  return;}
+	     if( s.equals("83" ) ) {  reason="å¡ä¸å­˜åœ¨,";     return;}
+	     if( s.equals("84" ) ) {  reason="æ¥æ”¶å¡æ•°æ®å‡ºé”™,";   return;}
+	     if( s.equals("85" ) ) {  reason="æœªçŸ¥çš„é”™è¯¯,";      return;}
+	     if( s.equals("87" ) ) {  reason="è¾“å…¥å‚æ•°æˆ–è€…è¾“å…¥å‘½ä»¤æ ¼å¼é”™è¯¯,";    return;}
+	     if( s.equals("89" ) ) {  reason="è¾“å…¥çš„æŒ‡ä»¤ä»£ç ä¸å­˜åœ¨,";   return;}
+	     if( s.equals("8A" ) ) {  reason="åœ¨å¯¹äºå¡å—åˆå§‹åŒ–å‘½ä»¤ä¸­å‡ºç°é”™è¯¯,";      return;}
+	     if( s.equals("8B" ) ) {  reason="åœ¨é˜²å†²çªè¿‡ç¨‹ä¸­å¾—åˆ°é”™è¯¯çš„åºåˆ—å·,";       return;}
+	     if( s.equals("8C" ) ) {  reason="å¯†ç è®¤è¯æ²¡é€šè¿‡,";    return;}
+	     if( s.equals("8F" ) ) {  reason="è¯»å–å™¨æ¥æ”¶åˆ°æœªçŸ¥å‘½ä»¤,";   return;}
+	     if( s.equals("90" ) ) {  reason="å¡ä¸æ”¯æŒè¿™ä¸ªå‘½ä»¤,";   return;}
+	     if( s.equals("91" ) ) {  reason="å‘½ä»¤æ ¼å¼æœ‰é”™è¯¯,";        return;}
+	     if( s.equals("92" ) ) {  reason="åœ¨å‘½ä»¤çš„FLAGå‚æ•°ä¸­ï¼Œä¸æ”¯æŒOPTION æ¨¡å¼,";     return;}
+	     if( s.equals("93" ) ) {  reason="è¦æ“ä½œçš„BLOCKä¸å­˜åœ¨,";   return;}
+	     if( s.equals("94" ) ) {  reason="è¦æ“ä½œçš„å¯¹è±¡å·²ç»åˆ«é”å®šï¼Œä¸èƒ½è¿›è¡Œä¿®æ”¹,";   return;}
+	     if( s.equals("95" ) ) {  reason="é”å®šæ“ä½œä¸æˆåŠŸ,";  return;}
+	     if( s.equals("96" ) ) {  reason="å†™æ“ä½œä¸æˆåŠŸ,";   return;}
 	}
 	public static int MF_Read()
 	{

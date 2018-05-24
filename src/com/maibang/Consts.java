@@ -10,29 +10,29 @@ package com.maibang;
 public class Consts {
 	
 	/**
-	 * ×x˜ËÕI
+	 * è®€æ¨™èªŒ
 	 */
 	public static boolean readFlag = false;
 	
 	public static String action = "CKIN";
 	
 	/**
-	 * Ôç³¿Ë¢¿¨
+	 * æ—©æ™¨åˆ·å¡
 	 */
 	public static final String CHECK_IN = "CKIN";
 	
 	/**
-	 * ÏÂÎçëxé_
+	 * ä¸‹åˆé›¢é–‹
 	 */
 	public static final String CHECK_OUT = "CKOUT";
 	
 	/**
-	 * ÙÎï
+	 * è³¼ç‰©
 	 */
 	public static final String SHOP = "SHOP";
 	
 	/**
-	 * át¯Ÿ
+	 * é†«ç™‚
 	 */
 	public static final String DOCT = "DOCT";
 	
