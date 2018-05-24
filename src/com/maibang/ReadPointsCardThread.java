@@ -27,15 +27,21 @@ public class ReadPointsCardThread implements Runnable {
 
 	private MainFrameUI mainFrameUI;
 
-	private StringBuffer outputSb = new StringBuffer();
+	private static StringBuffer outputSb = new StringBuffer();
 
-	private StringBuffer idCardNoSb = new StringBuffer();
+	private static StringBuffer idCardNoSb = new StringBuffer();
 
-	private String prefixCardNo = "";
+	private static String prefixCardNo = "";
 
 	public ReadPointsCardThread(MainFrameUI mainFrameUI) {
 		super();
 		this.mainFrameUI = mainFrameUI;
+	}
+
+	public static void cleanHistoryRecord() {
+		outputSb.delete(0, outputSb.length());
+		idCardNoSb.delete(0, idCardNoSb.length());
+		prefixCardNo = "";
 	}
 
 	/*
