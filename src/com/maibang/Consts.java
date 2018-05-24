@@ -16,6 +16,8 @@ public class Consts {
 
 	public static String action = "CKIN";
 
+	public static int point = 0;
+
 	/**
 	 * 早晨刷卡
 	 */

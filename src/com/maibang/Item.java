@@ -7,11 +7,16 @@ package com.maibang;
  * @author qinfei
  *
  */
-public class PointType {
+public class Item {
 
 	private String text;
 
 	private int score;
+	public Item(String text, int score) {
+		super();
+		this.text = text;
+		this.score = score;
+	}
 
 	public String getText() {
 		return text;
@@ -27,6 +32,11 @@ public class PointType {
 
 	public void setScore(int score) {
 		this.score = score;
+	}
+
+	@Override
+	public String toString() {
+		return text;
 	}
 
 }

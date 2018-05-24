@@ -10,16 +10,16 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
 
-import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
@@ -30,6 +30,8 @@ import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
 import org.jb2011.lnf.beautyeye.ch3_button.BEButtonUI;
 import org.xvolks.jnative.exceptions.NativeException;
 
+import cn.hutool.core.convert.Convert;
+import cn.hutool.core.util.StrUtil;
 import cn.hutool.log.Log;
 import cn.hutool.log.LogFactory;
 import cn.hutool.setting.dialect.Props;
@@ -44,10 +46,9 @@ public class MainFrameUI {
 
 	private JFrame frame;
 
-	private final ButtonGroup buttonGroup = new ButtonGroup();
 	JTextArea dataArea = new JTextArea();
 	String s100 = "";
-	
+
 	Props props = new Props("config.properties");
 
 	/**
@@ -55,7 +56,6 @@ public class MainFrameUI {
 	 */
 
 	public static void main(String[] args) {
-
 		MainFrameUI window = new MainFrameUI();
 
 		EventQueue.invokeLater(new Runnable() {
@@ -146,18 +146,17 @@ public class MainFrameUI {
 		pointsTypeLabel.setBounds(10, 11, 65, 15);
 		controlPanel.add(pointsTypeLabel);
 
-		JRadioButton mornCheckInRadio = new JRadioButton("\u65e9\u6668\u7b7e\u5230", true);
-		buttonGroup.add(mornCheckInRadio);
-		mornCheckInRadio.setBounds(70, 7, 86, 23);
-		controlPanel.add(mornCheckInRadio);
+		List<Item> pointTypes = loadPoints();
 
-		/**
-		 * 下午离开
-		 */
-		JRadioButton nightCheckOutRadio = new JRadioButton("\u4e0b\u5348\u79bb\u5f00", false);
-		buttonGroup.add(nightCheckOutRadio);
-		nightCheckOutRadio.setBounds(168, 7, 86, 23);
-		controlPanel.add(nightCheckOutRadio);
+		JComboBox<Item> pointTypeComboBox = new JComboBox<>();
+		pointTypeComboBox.setBounds(70, 7, 200, 23);
+		pointTypeComboBox.setMaximumRowCount(pointTypes.size());
+
+		controlPanel.add(pointTypeComboBox);
+
+		for (Item pointType : pointTypes) {
+			pointTypeComboBox.addItem(pointType);
+		}
 
 		JLabel currentLabel = new JLabel("\u5f53\u524d\u72b6\u6001\uff1a");
 		currentLabel.setBounds(10, 45, 65, 15);
@@ -210,28 +209,16 @@ public class MainFrameUI {
 			}
 		});
 
-		/**
-		 * 早晨签到
-		 */
-		mornCheckInRadio.addActionListener(new ActionListener() {
+		pointTypeComboBox.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Consts.action = Consts.CHECK_IN;
 				ReadPointsCardThread.cleanHistoryRecord();
-			}
-		});
+				Item item = (Item) pointTypeComboBox.getSelectedItem();
+				Consts.action = item.getText();
+				Consts.point = item.getScore();
 
-		/**
-		 * 早晨签到
-		 */
-		nightCheckOutRadio.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				Consts.action = Consts.CHECK_OUT;
-				ReadPointsCardThread.cleanHistoryRecord();
-
+				System.out.println(Consts.action + "," + Consts.point);
 			}
 		});
 
@@ -280,9 +267,38 @@ public class MainFrameUI {
 	public JFrame getFrame() {
 		return frame;
 	}
-	
-	private List<PointType> loadPoints() {
-		props
+
+	private List<Item> loadPoints() {
+
+		List<Item> pointTypes = new ArrayList<>();
+
+		try {
+			String pointType = (String) props.get("fulek.point.typelist");
+
+			List<String> typeList = StrUtil.split(pointType, ',');
+
+			int i = 0;
+			for (String type : typeList) {
+				i++;
+				String[] pointTypeArr = type.replaceAll("\\[", "").replaceAll("\\]", "").split("\\:");
+
+				if (pointTypeArr != null && pointTypeArr.length == 2) {
+					Item pointType2 = new Item(pointTypeArr[0], Convert.toInt(pointTypeArr[1]));
+					pointTypes.add(pointType2);
+
+					if (i == 1) {
+						Consts.action = pointType2.getText();
+						Consts.point = pointType2.getScore();
+						
+						System.out.println(Consts.action + "," + Consts.point);
+					}
+				}
+			}
+		} catch (Exception e) {
+			log.error("has exception = {}", e);
+		}
+
+		return pointTypes;
 	}
 
 }
