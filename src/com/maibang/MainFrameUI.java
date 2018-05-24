@@ -11,6 +11,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Enumeration;
+import java.util.List;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
@@ -31,6 +32,7 @@ import org.xvolks.jnative.exceptions.NativeException;
 
 import cn.hutool.log.Log;
 import cn.hutool.log.LogFactory;
+import cn.hutool.setting.dialect.Props;
 
 /**
  * @author jason
@@ -45,6 +47,8 @@ public class MainFrameUI {
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	JTextArea dataArea = new JTextArea();
 	String s100 = "";
+	
+	Props props = new Props("config.properties");
 
 	/**
 	 * Launch the application.
@@ -275,6 +279,10 @@ public class MainFrameUI {
 
 	public JFrame getFrame() {
 		return frame;
+	}
+	
+	private List<PointType> loadPoints() {
+		props
 	}
 
 }
