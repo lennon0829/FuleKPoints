@@ -114,6 +114,7 @@ public class ReadPointsCardThread implements Runnable {
 			Map<String, Object> paramMap = new HashMap<>();
 			paramMap.put("action", Consts.action);
 			paramMap.put("imei", idCardNo);
+			paramMap.put("point", Consts.point);
 
 			String json = JSONUtil.parseFromMap(paramMap).toString();
 
