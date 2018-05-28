@@ -12,6 +12,7 @@ public class Item {
 	private String text;
 
 	private int score;
+
 	public Item(String text, int score) {
 		super();
 		this.text = text;

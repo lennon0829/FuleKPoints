@@ -218,7 +218,7 @@ public class MainFrameUI {
 				Consts.action = item.getText();
 				Consts.point = item.getScore();
 
-				System.out.println(Consts.action + "," + Consts.point);
+				log.info(Consts.action + "," + Consts.point);
 			}
 		});
 
@@ -289,8 +289,8 @@ public class MainFrameUI {
 					if (i == 1) {
 						Consts.action = pointType2.getText();
 						Consts.point = pointType2.getScore();
-						
-						System.out.println(Consts.action + "," + Consts.point);
+
+						log.info(Consts.action + "," + Consts.point);
 					}
 				}
 			}
