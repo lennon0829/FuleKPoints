@@ -217,7 +217,7 @@ public class MainFrameUI {
 				Item item = (Item) pointTypeComboBox.getSelectedItem();
 				Consts.action = item.getText();
 				Consts.point = item.getScore();
-
+				
 				log.info(Consts.action + "," + Consts.point);
 			}
 		});
@@ -234,7 +234,6 @@ public class MainFrameUI {
 		readCardsNoBtn.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-
 				statusLabel.setText("\u8BFB\u53D6\u5361\u53F7");
 
 				StringBuffer outputSb = new StringBuffer();
