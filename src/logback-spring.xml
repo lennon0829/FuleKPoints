@@ -24,7 +24,7 @@
 		<!--滚动策略 -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!--路径 -->
-			<fileNamePattern>../log/logbackInfo.%d.log.gz</fileNamePattern>
+			<fileNamePattern>../logbackInfo.%d.log.gz</fileNamePattern>
 		</rollingPolicy>
 	</appender>
 
@@ -41,12 +41,10 @@
 		<!--滚动策略 -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!--路径 -->
-			<fileNamePattern>../log/logbackError.%d.log.gz</fileNamePattern>
+			<fileNamePattern>../logbackError.%d.log.gz</fileNamePattern>
 		</rollingPolicy>
 	</appender>
 	
-	<logger name="com.maibang.pointsService.mapper.PointsRecordMapper" level="INFO"></logger>
-
 	<root level="INFO">
 		<appender-ref ref="consoleLog" />
 		<appender-ref ref="fileInfoLog" />

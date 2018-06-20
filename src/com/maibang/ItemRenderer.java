@@ -11,6 +11,7 @@ public class ItemRenderer extends BasicComboBoxRenderer {
 	 */
 	private static final long serialVersionUID = 7108652968262902608L;
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
 		super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
