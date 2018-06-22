@@ -139,7 +139,7 @@ public class ReadPointsCardThread implements Runnable {
 			return;
 		}
 
-        // »ñÈ¡ÒôÆµÊäÈëÁ÷
+        // è·å–éŸ³é¢‘è¾“å…¥æµ
         AudioInputStream audioInputStream = null;
         try {
             audioInputStream = AudioSystem.getAudioInputStream(soundFile);
@@ -147,9 +147,9 @@ public class ReadPointsCardThread implements Runnable {
             e1.printStackTrace();
             return;
         }
-        // »ñÈ¡ÒôÆµ±àÂë¶ÔÏó
+        // è·å–éŸ³é¢‘ç¼–ç å¯¹è±¡
         AudioFormat format = audioInputStream.getFormat();
-        // ÉèÖÃÊı¾İÊäÈë
+        // è®¾ç½®æ•°æ®è¾“å…¥
         SourceDataLine auline = null;
         DataLine.Info info = new DataLine.Info(SourceDataLine.class, format);
 
@@ -163,7 +163,7 @@ public class ReadPointsCardThread implements Runnable {
 
         auline.start();
       /*
-       * ´ÓÊäÈëÁ÷ÖĞ¶ÁÈ¡Êı¾İ·¢ËÍµ½»ìÒôÆ÷
+       * ä»è¾“å…¥æµä¸­è¯»å–æ•°æ®å‘é€åˆ°æ··éŸ³å™¨
        */
         int nBytesRead = 0;
         byte[] abData = new byte[512];
@@ -178,7 +178,7 @@ public class ReadPointsCardThread implements Runnable {
             e.printStackTrace();
             return;
         } finally {
-            // Çå¿ÕÊı¾İ»º³å,²¢¹Ø±ÕÊäÈë
+            // æ¸…ç©ºæ•°æ®ç¼“å†²,å¹¶å…³é—­è¾“å…¥
             auline.drain();
             auline.close();
         }
